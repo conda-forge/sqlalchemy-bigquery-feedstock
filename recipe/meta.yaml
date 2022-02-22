@@ -24,7 +24,7 @@ requirements:
     - google-api-core >=1.30.0
     - google-auth >=1.25.0,<3.0.0dev
     - google-cloud-bigquery >=2.25.2,<3.0.0dev
-    - sqlalchemy >=1.2.0,<=1.4.25
+    - sqlalchemy >=1.2.0,<=1.4.27
 
 test:
   imports:
