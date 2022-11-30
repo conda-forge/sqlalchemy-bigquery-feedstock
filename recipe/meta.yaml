@@ -1,5 +1,5 @@
 {% set name = "sqlalchemy-bigquery" %}
-{% set version = "1.4.4" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,26 +7,27 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sqlalchemy-bigquery-{{ version }}.tar.gz
-  sha256: 0d4a5fe04723034812a14e849632230eabbab33ca5234c7cae563adfcc506518
+  sha256: 945f6847877fee798d13e2159a91592f5931374e8008848429c623f6bbf26d05
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
-    - python >=3.6,<3.11
+    - python >=3.7,<3.11
     - pip
   run:
-    - python >=3.6,<3.11
-    - future
+    - python >=3.7,<3.11
     - google-api-core >=1.31.5,<3.0.0dev,!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0
     - google-auth >=1.25.0,<3.0.0dev
     - google-cloud-bigquery-core >=2.25.2,<4.0.0dev
     - google-cloud-bigquery-storage >=2.0.0,<3.0.0dev
-    - pyarrow >=3.0.0,<7.0dev
-    - sqlalchemy >=1.2.0,<=1.4.27
+    - packaging
+    - pyarrow >=3.0.0
+    - sqlalchemy >=1.2.0,<2.0.0dev
+    - future
 
 test:
   imports:
