@@ -1,5 +1,5 @@
 {% set name = "sqlalchemy-bigquery" %}
-{% set version = "1.5.0" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sqlalchemy-bigquery-{{ version }}.tar.gz
-  sha256: 945f6847877fee798d13e2159a91592f5931374e8008848429c623f6bbf26d05
+  sha256: ca92a6de7ba3600235d29b20883a4ef3e964241b547e136d43cb6c0702edcbe8
 
 build:
   noarch: python
