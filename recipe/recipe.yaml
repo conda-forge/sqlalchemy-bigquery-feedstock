@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: sqlalchemy-bigquery
-  version: 1.16.0
+  version: 1.17.0
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: fe937a0d1f4cf7219fcf5d4995c6718805b38d4df43e29398dec5dc7b6d1987e
+  sha256: 472284546a0c79cbf99b1bb0f5f99c5131fa888ea25d2d53208e6863e5094e2f
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -24,12 +24,11 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }},<3.15
-    - google-api-core >=1.31.5,<3.0.0,!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0
-    - google-auth >=1.25.0,<3.0.0
-    - google-cloud-bigquery-core >=3.3.6,<4.0.0
+    - google-api-core >=2.11.1,<3.0.0,!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0
+    - google-auth >=2.14.1,<3.0.0
+    - google-cloud-bigquery-core >=3.20.0,<4.0.0
     - packaging
     - sqlalchemy >=1.4.16,<3.0.0
-
 tests:
   - python:
       imports:
@@ -46,7 +45,7 @@ about:
   summary: SQLAlchemy dialect for BigQuery
   license: MIT
   license_file: LICENSE
-  homepage: https://github.com/googleapis/python-bigquery-sqlalchemy
+  homepage: https://github.com/googleapis/google-cloud-python/tree/main/packages/sqlalchemy-bigquery
 
 extra:
   recipe-maintainers:
