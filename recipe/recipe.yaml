@@ -45,7 +45,7 @@ about:
   summary: SQLAlchemy dialect for BigQuery
   license: MIT
   license_file: LICENSE
-  homepage: https://github.com/googleapis/python-bigquery-sqlalchemy
+  homepage: https://github.com/googleapis/google-cloud-python/tree/main/packages/sqlalchemy-bigquery
 
 extra:
   recipe-maintainers:
