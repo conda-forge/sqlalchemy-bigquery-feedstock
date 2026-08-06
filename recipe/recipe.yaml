@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: sqlalchemy-bigquery
-  version: "1.17.1"
+  version: 1.17.2
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 6801fe37ea4362cff317862aaeaea21d07f6896eb31c3b4fbddfdcaef40a84fd
+  sha256: 32f7893c16546d5cc5dc939fb7cf74f51505766a16422f21dd2e7e78ea8ec849
 
 build:
   number: 0
@@ -24,7 +24,7 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }},<3.15
-    - google-api-core >=2.11.1,<3.0.0,!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0
+    - google-api-core >=2.25.0,<3.0.0
     - google-auth >=2.14.1,<3.0.0
     - google-cloud-bigquery-core >=3.20.0,<4.0.0
     - packaging
