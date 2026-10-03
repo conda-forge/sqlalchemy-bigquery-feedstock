@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: sqlalchemy-bigquery
-  version: 1.17.2
+  version: "1.17.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 32f7893c16546d5cc5dc939fb7cf74f51505766a16422f21dd2e7e78ea8ec849
+  sha256: 7927c8fd17b7adb76da058fc6494626b124e0f6d011bdce8c477c77352b24889
 
 build:
   number: 0
